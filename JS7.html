@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/comeback.css">
+  <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+  <title>Різнокольорові кола</title>
+</head>
+<body>
+  <canvas id="myCanvas" width="1800" height="900"></canvas>
+  <script>
+    let circleCount = +prompt("Введіть кількість кол:");
+
+    function drawCircles() {
+      let canvas = document.getElementById('myCanvas');
+      let ctx = canvas.getContext('2d');
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      for (let i = 0; i < circleCount; i++) {
+        let x = Math.random() * canvas.width;
+        let y = Math.random() * canvas.height;
+        let radius = Math.random() * 90 + 10;
+
+        let color = getRandomColor();
+        let borderColor = getRandomColor();
+
+        ctx.beginPath();
+        ctx.arc(x, y, radius, 0, 2 * Math.PI);
+        ctx.strokeStyle = borderColor;
+        ctx.lineWidth = 3;
+        ctx.fillStyle = color;
+        ctx.fill();
+        ctx.stroke();
+      }
+    }
+
+    function getRandomColor() {
+      let letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+    drawCircles();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/comeback.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <title>test</title>
+    <style type="text/css">
+		div{
+			font-size: 25px; 
+			color: rgb(62, 17, 17);
+			text-align: left;
+            width: 70%;
+            
+            background-color: rgb(237, 249, 251, 0.9);
+            border-radius: 12px;
+            margin-bottom: 30px;
+		}
+		.side{
+			width: 300px;
+			height: 30px;
+			font-size: 25px;
+			text-align: center;
+
+		}
+        .container{
+            background-color: rgba(255, 255, 255, 0.663);
+            border-radius: 20px;
+            padding: 30px 60px;
+            width: 450px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        margin-top: 100px;
+        font-size: 25px;
+        }
+body{
+    background-image: url(https://phonoteka.org/uploads/posts/2022-02/1645345284_1-phonoteka-org-p-fon-dlya-rabochego-stola-plyazh-1.jp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+
+.btn {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 10px;
+  margin-left: 15px;
+  will-change: transform;
+}
+
+.btn:disabled {
+  pointer-events: none;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+	h1{
+        font-size: 40px;
+        text-align: center;
+        padding-top: 30px;
+    }	
+p{
+margin-left: 15px;
+margin-right: 15px;
+}
+	</style>
+</head>
+<body>
+<script>
+ let planet = +prompt("Виберіть до чого відноситься Марс. 1 - Планета. 2 - Супутник")
+ switch(planet) {
+     case 1:
+     alert("Ти відповів правильно!");
+     break;
+     case 2:
+     alert("Ти помилився Марс це планета");
+     break;
+    default:
+        alert("Ти помилився Марс це планета")
+ }
+ let son = +prompt("Виберіть 5 планету від Сонця. 1 - Земля. 2 - Венера. 3 - Юпитер. 4 - Нептун")
+ switch(son) {
+     case 1:
+     alert("Ти помиляешься!");
+     break;
+     case 2:
+     alert("Цього разу ти не вгадав");
+     break;
+     case 3:
+     alert("Воу воу ти вгадав!");
+     break;
+     case 4:
+     alert("Ти помиляешься!");
+     break;
+    default:
+        alert("А я не скажу вірної відповіді!")
+ }
+ let titan = +prompt("Хто такий Титан. 1 - Персонаж із міфів. 2 - Супутник Сатурна. 3 - Це планета.")
+ switch(titan) {
+     case 1:
+     alert("Він тут нідочого!");
+     break;
+     case 2:
+     alert("Цього разу ти влучно відповів!");
+     break;
+     case 3:
+     alert("Ти був близько, але ні");
+     break;
+    default:
+        alert("Я незнаю що це за відповідь!")
+ }
+ 
+    </script>
+</body>
+</html>

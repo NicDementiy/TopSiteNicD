@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/comeback.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <title>numbers</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рахування цифр </title>
+    <style>
+        html{
+            height: 100%;
+        }
+        div{
+            width: 40%;
+         box-shadow: rgba(115, 115, 182, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        margin-top: 100px;
+        font-size: 25px;
+        background-color: rgba(104, 93, 93, 0.695);
+        padding: 30px 60px;
+      
+        justify-content: center;
+        
+        border-radius: 20px;
+        }
+        input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #070707;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #070707;
+    outline: none;
+    background: transparent;}
+     body{
+        background-image: url(https://phonoteka.org/uploads/posts/2022-02/1645345284_1-phonoteka-org-p-fon-dlya-rabochego-stola-plyazh-1.jpg); 
+     }
+    
+
+
+.btn {
+  align-items: center;
+  background-image: linear-gradient(144deg,#ffa600, #3e23ed 50%,#ffa600);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  width: 30%;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.btn:active,
+.btn:hover {
+  outline: 0;
+}
+
+.btn span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.btn:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+
+    </style>
+</head>
+
+<body>
+    <script>
+        function number() {
+            let num = +document.number.a.value;
+            let answer1 = document.getElementById("answer1");
+            let answer2 = document.getElementById("answer2");
+            let string1 = "", string2 = "";
+            let numStr = num.toString();
+            if (isNaN(num)) {
+                string1 = string2 = "Ви ввели не число";
+            } else {
+                for (let i = 0; i < numStr.length; i++) {
+                    if (numStr.length % 10 === 1 && numStr.length !== 11) {
+                        string1 = "У числі " + num + " " + numStr.length + " цифра" + "<br>";
+                    } else if (numStr.length % 10 >= 2 && numStr.length % 10 <= 4 && (numStr.length < 10 || numStr.length >= 20)) {
+                        string1 = "У числі " + num + " " + numStr.length + " цифри" + "<br>";
+                    } else {
+                        string1 = "У числі " + num + " " + numStr.length + " цифр" + "<br>";
+                    }
+        
+                    switch (numStr[i]) {
+                        case '1':
+                            string2 += 'Один ';
+                            break;
+                        case '2':
+                            string2 += 'Два ';
+                            break;
+                        case '3':
+                            string2 += 'Три ';
+                            break;
+                        case '4':
+                            string2 += 'Чотири ';
+                            break;
+                        case '5':
+                            string2 += "П'ять ";
+                            break;
+                        case '6':
+                            string2 += 'Шість ';
+                            break;
+                        case '7':
+                            string2 += 'Сім ';
+                            break;
+                        case '8':
+                            string2 += 'Вісім ';
+                            break;
+                        case '9':
+                            string2 += "Дев'ять ";
+                            break;
+                        case '0':
+                            string2 += 'Нуль ';
+                            break;
+                    }
+                }
+            }
+            answer1.innerHTML = string1;
+            answer2.innerHTML = string2;
+        }
+        </script>
+<center><div>
+    <center><p><b>Зараз я вирахую цифри у вашому числі</b></p></center>
+    <form name="number" action="javascript:number()">
+        Введіть ваше число:<input class="side" name="a" type="text" value="" size="4">
+        <input class="btn" type="submit" value="OK">
+        <input class="btn" type="reset" name="reset" value="Скинути">
+    </form>
+        <span id="answer1"></span><br>
+       У вашому числі такі цифри: <span id="answer2"></span>
+       
+</div></center>
+</body>
+</html>
+
+</body>
+</html>

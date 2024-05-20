@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/comeback.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <title>Power and factorial of number</title>
+    <style>
+        html {
+    height: 100%;
+  }
+body{
+    background-image: url(https://phonoteka.org/uploads/posts/2022-02/1645345284_1-phonoteka-org-p-fon-dlya-rabochego-stola-plyazh-1.jpg); 
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+div{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(85, 104, 84, 0.529);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px; 
+        }
+        p{
+    margin: 10px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  .side{
+    color: #fff;
+   
+  }
+  span{
+    color: white;
+  }
+  
+.btn {
+  align-items: center;
+  background-image: linear-gradient(144deg,#03e9f4, #42f351ec 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(65, 252, 115, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 20%;
+}
+
+.btn:active,
+.btn:hover {
+  outline: 0;
+}
+
+.btn span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.btn:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    font-size: 16px;
+    min-width: 196px;
+  }
+}
+input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;}
+
+    .factorial{
+        left: 70%;
+    }
+    </style>
+</head>
+<body>
+    
+    <script>
+function power(){
+let x=+document.power.a.value;
+let n=+document.power.b.value;
+let result=1;
+let answer=document.getElementById("answer1");
+for(let i =1; i<=n; i++){
+    result=x*result
+}
+string=result;
+answer.innerHTML = string;
+}
+ function factorial(){
+let n=+document.factorial.n.value;
+let answer=document.getElementById("answer2");
+      let result=1;
+      for(let i =1; i<=n; i++){
+      result=i*result
+      }
+      string=`Факторіал числа ${n} дорівнює ${result}`
+      
+answer.innerHTML = string;
+    }
+    </script>
+    <div class="power">
+        <p style="font-weight: 900; font-size: 20px; margin-bottom: 15px;">Розрахунок степеня x<sup>n</sup></sup></p>
+        <form name="power" action="javascript:power()">
+           Основа степеня х дорівнює<input class="side" name="a" type="text" value="" size="4">
+            Пoказник степеня n дорівнює<input class="side" name="b" type="text" value="" size="4">
+            <input class="btn" type="submit" value="Розрахувати">
+            <input class="btn" type="reset" name="reset" value="Скинути">
+        </form>
+         Відповідь:<span id="answer1"></span><br/>
+
+    </div>
+   <div class="factorial">
+    <p style="font-weight: 900; font-size: 20px; margin-bottom: 15px;">Факторіал числа n</p>
+        <form name="factorial" action="javascript:factorial()">
+           Число n дорівнює<input class="side" name="n" type="text" value="" size="4">
+            <input class="btn" type="submit" value="Розрахувати">
+            <input class="btn" type="reset" name="reset" value="Скинути">
+        </form>
+         Відповідь: <span id="answer2"></span><br/>
+        </div>
+        <a href="index.html"><button class="custom-btn btn-15" style="font-size: 15px;">Повернутися на головну сторінку</button></a>
+</body>
+</html>

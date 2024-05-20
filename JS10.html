@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/comeback.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+</head>
+<style>
+    body{
+background-image: url(fon.jfif);
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+</style>
+<body>
+    <div class="content">
+    <canvas id="gameCanvas"></canvas>
+    <h2>Список емодзі</h2>
+    <form name="charcode_form" action="javascript:charcoding()">
+        <select name="category">
+            <option value="1">Тварини</option>
+            <option value="2">Емоції</option>
+            <option value="3">Пальці</option>
+            <option value="4">Одяг</option>
+        </select>
+        <button>Print</button>
+    </form>
+    <div id="charcode_grade" class="scrolldiv"></div>
+    <script type="text/javascript">
+        function charcoding() {
+            let category = +document.charcode_form.category.value;
+            let emoji = '';
+            let min, max;
+                switch (category) {
+                case 1:
+                    min = 128000;
+                    max = 128063;
+                    break;
+                case 2:
+                    min = 128512;
+                    max = 128586;
+                    break;
+                case 3:
+                    min = 128070;
+                    max = 128080;
+                    break;
+                case 4:
+                    min = 128081;
+                    max = 128098;
+                    break;
+            }
+            for (var i = min; i < max; i++) {
+                emoji += "&#"+i+"; - &amp;#"+i+";&nbsp ";
+            }
+            document.getElementById('charcode_grade').innerHTML = emoji;
+        }
+    </script>
+</div></div>
+    </div>
+</body>
+</html>
